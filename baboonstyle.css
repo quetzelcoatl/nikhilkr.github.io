@@ -1,0 +1,54 @@
+.card {
+  height: 300px;
+  width: 175px;
+  -webkit-perspective: 100rem;
+          perspective: 100rem;
+  position: relative;
+  -webkit-box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.card__side {
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 700ms ease;
+  transition: all 700ms ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card__side--front {
+  background-color: #ffffff;
+}
+
+.card__side--back {
+  background-color: #ffffff;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card:hover .card__side--front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+/*# sourceMappingURL=baboonstyle.css.map */

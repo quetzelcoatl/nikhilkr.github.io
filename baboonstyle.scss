@@ -1,0 +1,44 @@
+.card {
+  height: 300px;
+  width: 175px;
+  perspective: 100rem;
+  position: relative;
+  
+  box-shadow: 8px 8px 8px 0px rgba(0,0,0,0.2);
+  border-radius:20px;
+
+ 
+  
+  &__side {
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 700ms ease;
+    backface-visibility: hidden;
+    
+    &--front {
+      background-color: #ffffff;
+    }
+    
+    &--back {
+      background-color: #ffffff;
+      transform: rotateY(180deg);
+    }
+  }
+  
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+}
+
